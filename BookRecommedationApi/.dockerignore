@@ -1,0 +1,32 @@
+# Build outputs
+bin/
+obj/
+*.csproj.user
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
+
+# Version control
+.git/
+.gitignore
+.github/
+
+# IDE files
+.vscode/
+.idea/
+*.user
+*.suo
+
+# Logs
+logs/
+*.log
+
+# Docker files
+Dockerfile
+.dockerignore
+
+# Documentation
+README.md
+*.md

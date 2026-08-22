@@ -1,0 +1,61 @@
+# ===========================
+# Ignore EVERYTHING except the app
+# ===========================
+
+/*
+!/BookRecommedationApi/
+!/book-app/
+!/.gitignore
+!/README.md
+!/docker-compose.yml
+
+# ===========================
+# API ignores (VS + build files)
+# ===========================
+BookRecommedationApi/bin/
+BookRecommedationApi/obj/
+BookRecommedationApi/Migrations/
+BookRecommedationApi/*.db
+BookRecommedationApi/*.db-shm
+BookRecommedationApi/*.db-wal
+BookRecommedationApi/appsettings.Development.json
+BookRecommedationApi/.vs/
+BookRecommedationApi/.vscode/
+BookRecommedationApi/*.sln
+BookRecommedationApi/*.user
+BookRecommedationApi/*.suo
+BookRecommedationApi/WeatherForecast.cs
+BookRecommedationApi/BookRecommendationApi.http
+BookRecommedationApi/Properties/
+BookRecommedationApi/docker-test.ps1
+BookRecommedationApi/final-test.ps1
+BookRecommedationApi/test-*.ps1
+BookRecommedationApi/working*.ps1
+BookRecommedationApi/login.json
+BookRecommedationApi/Controllers/WeatherForecastController.cs
+BookRecommedationApi/obj/
+
+# ===========================
+# React ignores
+# ===========================
+book-app/node_modules/
+book-app/build/
+book-app/.env
+book-app/.env.*.local
+book-app/.git/
+book-app/.vscode/
+book-app/.idea/
+
+# ===========================
+# General ignores
+# ===========================
+.vscode/
+.idea/
+*.suo
+*.user
+.DS_Store
+Thumbs.db
+logs/
+*.log
+data/
+*.pid
