@@ -1,74 +1,120 @@
-\# 📚 Book Recommendation App
+# 📚 BookVerse — Book Recommendation App
 
+Welcome to **BookVerse**, a full-stack app where readers can browse, rate, and recommend books.
 
+Built with:
+- ⚛️ React frontend
+- 🧠 ASP.NET Core Web API backend
+- 🗄️ SQLite database
+- 🔐 JWT authentication for protected actions
 
-A full-stack book recommendation application built with React and ASP.NET Core.
+---
 
+## ✨ Highlights
 
+- Browse all books
+- Filter books by genre
+- View recommended books
+- Add, update, delete books (authenticated)
+- Toggle recommendation status
+- Clean UI with Bootstrap + toast notifications
 
-\## 📁 Project Structure
+---
 
+## 🧱 Project Structure
 
-
-
-
+```text
 book-recommendation-app/
-
-├── BookRecommedationApi/ # ASP.NET Core 8.0 API
-
-│ ├── Controllers/ # API endpoints
-
-│ ├── Models/ # Data models
-
-│ ├── Data/ # Database context
-
-│ ├── Services/ # Business logic
-
-│ └── Program.cs
-
-├── book-app/ # React Frontend
-
-│ ├── src/ # React source code
-
-│ │ ├── components/ # React components
-
-│ │ ├── services/ # API services
-
-│ │ └── App.js
-
-│ └── package.json
-
-├── docker-compose.yml # Multi-container setup
-
+├── BookRecommedationApi/       # ASP.NET Core 8 API
+│   ├── Controllers/            # Auth + book endpoints
+│   ├── Data/                   # DbContext + seed data
+│   ├── Models/                 # Book, User models
+│   └── Services/               # JWT auth service
+├── book-app/                   # React app
+│   └── src/
+│       ├── components/
+│       └── services/
 └── README.md
+```
 
-\## 🚀 Quick Start
+---
 
+## 🚀 Run Locally
 
-
-\### Prerequisites
-
-\- Node.js (v18+)
-
-\- .NET 8.0 SDK
-
-\- Docker Desktop
-
-
-
-\### Start with Docker (Recommended)
-
-
+### 1) Start the API
 
 ```bash
+cd /home/runner/work/book-recommendation-app/book-recommendation-app/BookRecommedationApi
+dotnet restore
+dotnet run --urls http://localhost:8080
+```
 
-\# Build and run both services
+API base URL: `http://localhost:8080/api`  
+Swagger UI: `http://localhost:8080/swagger`
 
-docker-compose up -d
+### 2) Start the Frontend
 
+```bash
+cd /home/runner/work/book-recommendation-app/book-recommendation-app/book-app
+npm install
+npm start
+```
 
+Frontend URL: `http://localhost:3000`
 
-\# View logs
+> The frontend uses `REACT_APP_API_URL` (defaults to `http://localhost:8080/api`).
 
-docker-compose logs -f
+---
 
+## 🔐 Demo Login
+
+Use this account to access protected routes:
+
+- **Username:** `admin`
+- **Password:** `admin123`
+
+---
+
+## 📡 API Snapshot
+
+Public endpoints:
+- `GET /api/books`
+- `GET /api/books/{id}`
+- `GET /api/books/genre/{genre}`
+- `GET /api/books/recommended`
+- `GET /api/books/rating/{minRating}`
+
+Protected endpoints (JWT required):
+- `POST /api/books`
+- `PUT /api/books/{id}`
+- `DELETE /api/books/{id}`
+- `POST /api/books/{id}/recommend`
+
+Auth:
+- `POST /api/auth/login`
+
+---
+
+## 🌱 Seeded Data
+
+The API seeds a starter shelf with books like:
+- The Hobbit
+- Dune
+- 1984
+- The Shining
+
+So you can explore immediately after launch.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React, React Router, Axios, Bootstrap, React-Toastify
+- **Backend:** ASP.NET Core 8, Entity Framework Core, JWT Auth
+- **Database:** SQLite
+
+---
+
+## 📌 Note
+
+This project is ideal for learning full-stack integration, auth flow, and CRUD APIs in a clean, beginner-friendly architecture.
