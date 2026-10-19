@@ -118,3 +118,9 @@ So you can explore immediately after launch.
 ## 📌 Note
 
 This project is ideal for learning full-stack integration, auth flow, and CRUD APIs in a clean, beginner-friendly architecture.
+
+
+## 👤 Author
+
+**Raghava**: aspiring full stack .NET developer
+[GitHub](https://github.com/raghava503) · [LinkedIn](https://linkedin.com/in/raghava-gudiwada-0b2bb4317)
